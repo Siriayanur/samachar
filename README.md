@@ -1,6 +1,6 @@
 # samachar
 
-A new Flutter application.
+A simple news application built with flutter and using newsapi.org where current affairs and news particular to different categories(Technology,Science,Food,Fashion,etc) could be seen.
 
 ## Getting Started
 
