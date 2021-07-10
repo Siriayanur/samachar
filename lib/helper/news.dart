@@ -2,13 +2,14 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 import 'package:samachar/models/article.dart';
+import 'package:samachar/secrete.dart';
 
 class News {
   List<ArticleModel> news = [];
 
   Future<void> getNews() async {
     String url =
-        "https://newsapi.org/v2/top-headlines?country=in&apiKey=38af438ab3f144e1b0471922b9823c55";
+        "https://newsapi.org/v2/top-headlines?country=in&apiKey=$api_key";
     var response = await http.get(Uri.parse(url));
     var jsonBody = jsonDecode(response.body);
     if (jsonBody['status'] == "ok") {
@@ -35,7 +36,7 @@ class CategoryNewsClass {
 
   Future<void> getNews(String category) async {
     String url =
-        "https://newsapi.org/v2/top-headlines?country=in&category=$category&apiKey=38af438ab3f144e1b0471922b9823c55";
+        "https://newsapi.org/v2/top-headlines?country=in&category=$category&apiKey=$api_key";
     var response = await http.get(Uri.parse(url));
     var jsonBody = jsonDecode(response.body);
     if (jsonBody['status'] == "ok") {

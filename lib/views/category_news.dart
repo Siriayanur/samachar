@@ -4,6 +4,7 @@ import 'package:samachar/helper/news.dart';
 import 'package:samachar/models/article.dart';
 import 'package:samachar/views/home.dart';
 
+
 class CategoryNews extends StatefulWidget {
   final String category;
   CategoryNews({this.category});
